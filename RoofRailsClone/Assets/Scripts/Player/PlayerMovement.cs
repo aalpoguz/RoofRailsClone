@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private int firstTouch = 0;
     Rigidbody rb;
 
-    private Animator animator;
+    public Animator animator;
     void Start()
     {
         animator = GetComponentInChildren<Animator>();

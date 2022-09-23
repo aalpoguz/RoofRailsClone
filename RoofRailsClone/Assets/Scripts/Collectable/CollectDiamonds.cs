@@ -13,6 +13,7 @@ public class CollectDiamonds : MonoBehaviour
     {
         if (other.gameObject.CompareTag("diamond"))
         {
+            Debug.Log("diamond degdi");
             score++;
             scoreText.text = score.ToString();
             Destroy(other.gameObject);

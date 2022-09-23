@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Saw : MonoBehaviour
 {
-
+  
 
     private void Cut(Transform cutter)
     {
@@ -52,7 +52,7 @@ public class Saw : MonoBehaviour
                 piece.AddComponent<Rigidbody>();
             }
 
-              this.gameObject.transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
+            this.gameObject.transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
         }
 
     }
@@ -64,4 +64,6 @@ public class Saw : MonoBehaviour
             Cut(other.gameObject.transform);
         }
     }
+
+   
 }

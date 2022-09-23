@@ -11,6 +11,7 @@ TagManager:
   - abletrigger
   - diamond
   - fire
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ public class Transition : MonoBehaviour
 {
 
     public GameObject player;
+    public PlayerMovement playerMovement;
 
     void Start()
     {
@@ -20,8 +21,12 @@ public class Transition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("disabletrigger"))
+        if (other.gameObject.CompareTag("disabletrigger"))  
+        
         {
+            transform.GetChild(1).position = new Vector3(transform.position.x,-3.5f,transform.position.z);
+            playerMovement.animator.SetBool("hang", true);
+            playerMovement.animator.SetBool("run", false);
             this.gameObject.GetComponent<BoxCollider>().isTrigger = false;
             this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             gameObject.transform.GetChild(0).GetComponent<CapsuleCollider>().isTrigger = false;
@@ -33,6 +38,9 @@ public class Transition : MonoBehaviour
     {
         if (other.gameObject.CompareTag("abletrigger"))
         {
+            transform.GetChild(1).position = new Vector3(transform.position.x,0,transform.position.z);
+            playerMovement.animator.SetBool("hang", false);
+            playerMovement.animator.SetBool("run", true);
             this.gameObject.GetComponent<BoxCollider>().isTrigger = true;
             this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             gameObject.transform.GetChild(0).GetComponent<CapsuleCollider>().isTrigger = true;
