@@ -9,11 +9,13 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalSpeed;
     float lastTouchedX;
     private int firstTouch = 0;
+    Rigidbody rb;
 
     private Animator animator;
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame

@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Collect
   - Saw
+  - Transition
+  - disabletrigger
+  - abletrigger
+  - diamond
+  - fire
   layers:
   - Default
   - TransparentFX

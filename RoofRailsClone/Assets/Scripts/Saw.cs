@@ -8,6 +8,7 @@ public class Saw : MonoBehaviour
 
     private void Cut(Transform cutter)
     {
+        //left side
         if (cutter.transform.position.x < 0)
         {
             float y = transform.localScale.y;
@@ -26,8 +27,8 @@ public class Saw : MonoBehaviour
 
                 piece.AddComponent<Rigidbody>();
 
-
             }
+            this.gameObject.transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
         }
 
         else
@@ -50,18 +51,9 @@ public class Saw : MonoBehaviour
 
                 piece.AddComponent<Rigidbody>();
             }
+
+              this.gameObject.transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
         }
-
-    }
-
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 
