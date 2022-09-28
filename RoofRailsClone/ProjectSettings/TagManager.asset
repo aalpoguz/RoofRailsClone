@@ -12,6 +12,11 @@ TagManager:
   - diamond
   - fire
   - Ground
+  - disableAnimation
+  - ableAnimation
+  - finishBox
+  - X20Box
+  - X15Box
   layers:
   - Default
   - TransparentFX
